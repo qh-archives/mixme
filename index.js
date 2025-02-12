@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let canvas = document.getElementById("myCanvas");
-    canvas.width = 375;
-    canvas.height = 812;
+    canvas.width = 393*2;
+    canvas.height = 852*2;
 
     let ctx = canvas.getContext("2d");
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Bbase image
         ctx.drawImage(img, centerX, centerY, imgWidth, imgHeight);
 
-        // Shoes
+        // Shoes First
         if (shoesValue >= 1 && shoesValue <= 3) {
             ctx.drawImage(shoesImages[shoesValue - 1], centerX, centerY, imgWidth, imgHeight);
         }
