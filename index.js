@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     let canvas = document.getElementById("myCanvas");
-    canvas.width = 393*2;
-    canvas.height = 852*2;
+    canvas.width = 800;
+    canvas.height = 1500;
 
     let ctx = canvas.getContext("2d");
 
     ctx.fillStyle = "#FF66B2";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.font = "bold 22px monospace";
+    ctx.font = "bold 50px monospace";
     ctx.fillStyle = "White";
-    ctx.fillText("Style Queenie for School", 24, 50);
+    ctx.fillText("Style Queenie for School", 30, 200);
 
     // Load Base Image (nbody.png)
     let img = new Image();
@@ -46,17 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let shoesValue = 0;
 
     function drawScene() {
-        let imgWidth = img.width;
-        let imgHeight = img.height;
-        let centerX = (canvas.width - imgWidth) / 2;
+        let imgWidth = img.width *2;
+        let imgHeight = img.height *2;
+        let centerX = (canvas.width - imgWidth) /2 ;
         let centerY = (canvas.height - imgHeight) / 2;
 
         // Clear and redraw background
         ctx.fillStyle = "#FF66B2";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.font = "bold 22px monospace";
+        ctx.font = "bold 50px monospace";
         ctx.fillStyle = "White";
-        ctx.fillText("Style Queenie for School", 24, 50);
+        ctx.fillText("Style Queenie for School", 30, 80);
 
         // Bbase image
         ctx.drawImage(img, centerX, centerY, imgWidth, imgHeight);
@@ -92,11 +92,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.querySelectorAll(".btn");
     let numbers = document.querySelectorAll(".num");
 
-    let spacing = canvas.width / (buttons.length + 0.2);
+    let spacing = canvas.width / (buttons.length);
 
     buttons.forEach((btn, index) => {
         let container = btn.parentElement;
-        container.style.left = `${spacing * (index + 1) - 70}px`;
+        container.style.left = `${spacing * (index + 0.42) - 70}px`;
     });
 
     buttons.forEach((btn, index) => {
